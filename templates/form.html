@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заполни форму</title>
+    
+    <!-- Подключаем шрифт PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="pt-serif-regular">Регистрация</h1>
+        <form action="/submit" method="post">
+            <label>
+                <span>Имя:</span>
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                <span>Email:</span>
+                <input type="email" name="email" required>
+            </label>
+
+            <label>
+                <span>Возраст:</span>
+                <input type="number" name="age" min="1" required>
+            </label>
+
+            <label>
+                <span>Комментарий:</span>
+                <textarea name="comment" rows="4" required></textarea>
+            </label>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>

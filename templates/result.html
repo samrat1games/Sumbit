@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Спасибо за отправку!</h1>
+        <div class="result">
+            <p><strong>Имя:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Возраст:</strong> {{ age }}</p>
+            <p><strong>Комментарий:</strong><br>{{ comment }}</p>
+        </div>
+        <a href="/" class="btn">← Новая форма</a>
+    </div>
+</body>
+</html>
